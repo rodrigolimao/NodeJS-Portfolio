@@ -1,5 +1,13 @@
-a(href="/home") Home
-a(href="/aboutme") About Me
-a(href="/contactme") Contact Me
-a(href="/projects") Projects
-a(href="/services") Services
+mixin NavItem(menu)
+  li.nav-item
+    a.nav-link(href=`/${menu.toLowerCase()}`)= menu
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='#') Menu
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      - var menuNames = ['Home', 'Aboutme', 'Projects', 'Services', 'Contactme']
+      for menu in menuNames
+        +NavItem(menu)
