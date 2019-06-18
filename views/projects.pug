@@ -3,6 +3,7 @@ extends layout
 block content
   .container
   h1 My Skills and Experience
+  br
   section.skills
   a#work
     h3  Summary of my experience
@@ -22,11 +23,11 @@ block content
     br
     li
       | Advanced oral and written communication skills in English, Portuguese, Spanish and Italian.
-    br
-    
+
+      //Adding some photos of technologies in a grid container
     section.photo-grid-container
     .photo-grid
-    .photo-grid-item.first-item
+    .photo-grid-item
       img(src='images/java.png', alt='java')
     .photo-grid-item
       img(src='images/html.png', alt='html')

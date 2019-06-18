@@ -1,13 +1,11 @@
-mixin NavItem(menu)
-  li.nav-item
-    a.nav-link(href=`/${menu.toLowerCase()}`)= menu
+// header.pug - Rodrigo Lima - https://rodrigolima-portfolio.herokuapp.com/ - Nav bar as header
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  a.navbar-brand(href='#') Menu
-  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      - var menuNames = ['Home', 'Aboutme', 'Projects', 'Services', 'Contactme']
-      for menu in menuNames
-        +NavItem(menu)
+
+// The bootstrap theme is copied from bootstrap website. https://getbootstrap.com/
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+nav.navbar.navbar-light(style='background-color: #efeff5;')
+    a(href="/") Home
+    a(href="/aboutme") About Me
+    a(href="/projects") Projects
+    a(href="/services") Services
+    a(href="/contactme") Contact Me
