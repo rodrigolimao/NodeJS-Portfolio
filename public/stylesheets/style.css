@@ -1,3 +1,5 @@
+/*CSS file - Rodrigo Lima - Using CSS to style the page */
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +7,86 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+/* bodystyle */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: black;
+  color: white;
+  }
+
+  img.mainImage {
+    width: 600px;
+  }
+
+  img.mainImage:hover{
+    color: white;
+    filter:grayscale(0);
+  }
+
+  /**social media style and position**/
+
+.logos {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  bottom:22.5%;
+  left: 0;
+}
+
+.logos a:hover{
+  background-color: white;
+  color: black;
+  width: 20px;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+  width: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.fa-instagram {
+  background: rgb(188, 42, 141);
+  color: white;
+  width: 40px;
+  padding: 10px;
+  border-bottom-color: aliceblue;
+  text-align: center;
+}
+
+.fa-linkedin {
+  background: rgb(0, 119 ,181);
+  color: white;
+  width: 40px;
+  padding: 10px;
+  border-bottom-color: aliceblue;
+  text-align: center;
+
+}
+
+.fa-github-alt {
+  background: black;
+  color: white;
+  width: 40px;
+  padding: 10px;
+  border-bottom-color: aliceblue;
+  text-align: center;
+
+}
+
+.fa-google-plus{
+  background: #dd4b39;
+  color: white;
+  width: 40px;
+  padding: 10px;
+  border-bottom-color: aliceblue;
+  text-align: center;
+
 }
