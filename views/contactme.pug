@@ -1,35 +1,50 @@
 extends layout
 
 block content
-  //- .container
-  //- h1 Contact Me
-  //- p Don't hesitate in contacting me by email: 200380021@student.georgianc.on.ca 
-  //- p Rodrigo Lima
   .main.container
     .row
       .col-md-6.col-md-offset-3
         h1.display-4.m-b-2 Contact Me
-
+        
         // register form
-        form(method='POST' action='/register')
-          div.form-group
-            label(for='name') Name:
-            input#name.form-control(type='text', placeholder='Do not lie here' name='name')
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='name@email.com - Straight forward, eh?' name='email')
-          div.form-group
-            label(for='favoriteBook') Favorite Book:
-            input#favoriteBook.form-control(type='text', placeholder='1984 is a great one tbh' name='favoriteBook')
-          div.form-group
-            label(for='message') Your message:
-            input#message.form-control(type='text', placeholder='Tell me something nice' name='message')
-          button.btn.btn-primary(type='submit') Send me an e-mail
-          br
-          br
-          br
-          //Some social media icons
-          section
+        form#contact-form(action='/contactme', method='post', role='form')
+        fieldset
+        label(for='name') Name *
+        input#name(name='name', type='text', placeholder='Your name', required='required')
+        br
+        label(for='email') Email *
+        input#email(name='email', type='text', placeholder='Your email', required='required')
+        br
+        label(for='message') Message *
+        br
+        textarea#message(name='message', placeholder='Tell me something nice', rows='3', required='required')
+        br
+        button(type='submit') Submit
+        br
+        br
+
+        //- form(method='POST' action='/register')
+        //-   div.form-group
+        //-     label(for='name') Name:
+        //-     input#name.form-control(type='text', placeholder='Do not lie here' name='name')
+        //-   div.form-group
+        //-     label(for='email') Email:
+        //-     input#email.form-control(type='email', placeholder='name@email.com - Straight forward, eh?' name='email')
+        //-   div.form-group
+        //-     label(for='favoriteBook') Favorite Book:
+        //-     input#favoriteBook.form-control(type='text', placeholder='1984 is a great one tbh' name='favoriteBook')
+        //-   div.form-group
+        //-     label(for='message') Your message:
+        //-     input#message.form-control(type='text', placeholder='Tell me something nice' name='message')
+        //-   button.btn.btn-primary(type='submit') Send me an e-mail
+        //-   br
+        //-   br
+        //-   //br
+
+        //Some social media icons//
+          
+        section
+          p Also, you can contact me in my social media below:
           link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
           section.logos
           a.fa.fa-facebook(href='https://www.facebook.com/rodrigolimao/')
